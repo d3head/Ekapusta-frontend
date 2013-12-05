@@ -1,0 +1,81 @@
+<div class="jumbotron">
+  <div class="container">
+    <p class="hello">
+      <a href="http://ekapusta.ru">еКапуста</a> – это первый в России сервис для онлайн-займов!
+    </p>
+    <div class="features">
+        <div class="col-sm-6 col-md-4 col-lg-4">
+          <div class="feature">
+            <img src="/images/icons/quick.png" alt="...">
+            <div class="caption">
+              <p>быстро</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm-6 col-md-4 col-lg-4">
+          <div class="feature">
+            <img src="/images/icons/secure.png" alt="...">
+            <div class="caption">
+              <p>безопастно</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm-6 col-md-4 col-lg-4">
+          <div class="feature">
+            <img src="/images/icons/online.png" alt="...">
+            <div class="caption">
+              <p>на QIWI-кошелек</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="order">
+    <div class="margin">
+      <div class="row">
+        <div class="caption">Сколько Вам нужно?</div>
+        <div class="slider"><slider floor="100" ceiling="10000" precision="0" ng-model="item.cost"></slider></div>
+        <div class="how"><strong><span>{{ item.cost }} рублей</span></strong></div>
+      </div>
+    </div>
+    
+    <div class="margin">
+      <div class="row">
+        <div class="caption">На какой срок?</div>
+        <div class="slider"><slider floor="1" ceiling="21" precision="0" ng-model="item.date"></slider></div>
+        <div class="how"><strong><span>{{ item.date }} дней</span></strong></div>
+      </div>
+    </div>
+    
+    <div class="margin">
+       <div class="row">
+         <div class="total">Вы занимаете <strong><span>{{ item.cost }} рублей</span></strong>, вместе с процентами (<strong><span>{{ percents }} рублей</span></strong>) вам необходимо вернуть <strong><span>{{ total }} рублей</span>.</strong></div>
+         <div class="get-money">
+           <button type="button" class="btn btn-lg btn-success" data-toggle="modal" data-target="#showReg">Получить деньги! <i class="glyphicon glyphicon-chevron-right"></i></button>
+         </div>
+       </div>
+     </div>
+  </div>
+</div>
+
+<div class="partners">
+  <div class="jumbotron">
+    <div class="container">
+      <h4>Наши партнеры</h4>
+      <div class="pics">
+        <img src="https://ekapusta.ru/img/partner-visa.png">
+        <img src="https://ekapusta.ru/img/partner-visa.png">
+        <img src="https://ekapusta.ru/img/partner-visa.png">
+        <img src="https://ekapusta.ru/img/partner-visa.png">
+        <img src="https://ekapusta.ru/img/partner-visa.png">
+        <img src="https://ekapusta.ru/img/partner-visa.png">
+        <img src="https://ekapusta.ru/img/partner-visa.png">
+      </div>
+    </div>
+  </div>
+</div>

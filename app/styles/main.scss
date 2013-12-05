@@ -1,0 +1,254 @@
+$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
+
+@import 'modules/variables';
+@import 'sass-bootstrap/lib/bootstrap';
+@import 'modules/mixins';
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 992px;
+    }
+}
+
+a {
+  @include transition( all, .3s, ease );
+  color: $dark;
+  
+  &:hover {
+    color: lighten( $dark, 20% );
+    text-decoration: none;
+    border-bottom: 1px solid;
+  }
+}
+
+button {
+  outline: none;
+}
+
+.navbar-default {
+  background: rgb( 255, 255, 255 );
+  
+  a {
+    &:hover {
+      border-bottom: 0;
+    }
+  }
+  
+  .navbar-right {
+    margin-top: -5px;
+  }
+  
+  .navbar-brand {
+    background: url( ../images/header-logo.png ) no-repeat;
+    background-position-y: 10px;
+    background-position-x: 15px;
+    width: 167px;
+    
+    margin-right: 40px;
+    
+    span {
+      visibility: hidden;
+    }
+  }
+  
+  li {
+    @include transition( all, .3s, ease );
+    
+    &:hover,
+    &:focus {
+      background: rgb( 236, 240, 241 );
+    }
+  }
+}
+
+.navbar-inverse {
+  border-radius: 0;
+  border: 0;
+  background: $dark;
+  margin-bottom: 0;
+  
+  span {
+    color: rgb( 255, 255, 255 ) !important;
+  }
+}
+
+.jumbotron {
+  margin-top: -20px;
+  background: rgb( 236, 240, 241 );
+  
+  p {
+    &.hello {
+      text-align: center;
+      font-size: 1.4em;
+    }
+  }
+    
+  .features {
+    padding-top: 40px;
+    text-align: center;
+    
+    .row {
+      .feature {
+        img {
+          height: auto;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.order {
+  //display: inline;
+  
+  .margin {
+    margin-bottom: 20px;
+  }
+  
+  .row {
+    margin-bottom: 20px;
+    display: inline;
+    
+    .caption {
+      padding-top: 20px;
+      width: 200px;
+      font-size: 1.2em;
+      float: left;
+    }
+    
+    .slider {
+      float: left;
+      width: 600px;
+      position: relative;
+      margin-top: -2px;
+      margin-left: 10px;
+     
+      .bar {
+        height: 5px;
+        background: darken($gray, 10%);
+        border-radius: 10px;
+        position: relative;
+        box-shadow: 10px darken( $gray, 20px );
+      }
+     
+      .pointer {
+        position: absolute;
+        top: -3px;
+        width: 25px;
+        height: 25px;
+        display: block;
+        outline: 0;
+        border: 0;
+        background: rgb(255, 255, 255);
+        border: 1px solid darken($gray, 20%);
+        border-radius: 50%;
+    
+        cursor: pointer;
+        z-index: 1000;
+        -webkit-transition: 0;
+        -moz-transition: 0;
+        -ms-transition: 0;
+        -o-transition: 0;
+        transition: 0;
+        
+    
+        &:hover,
+        &:after {
+          background-color: rgb(250, 250, 250);
+          border-color: $gray;
+        }
+        
+        &.active {
+          border: 1px solid $gray;
+        }
+      }
+     
+      .percentages {
+        margin-bottom: 10px;
+      }
+    }
+    
+    .total {
+      font-size: 1.2em;
+      width: 70%;
+      float: left;
+    }
+    
+    span {
+      color: lighten( $dark, 10% );
+    }
+    
+    .how {
+      padding-top: 20px;
+      font-size: 1.4em;
+      float: right;
+      
+      input {
+        width: 50px;
+        text-align: center;
+        border-radius: 10px;
+        border: 1px solid rgb(189, 195, 199);
+        font-weight: 300;
+        font-size: 1.2em;
+        height: 32px;
+        outline:none;
+        min-height:30px;
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        box-sizing:border-box;
+        @include transition( all, .3s, ease );
+        
+        &:focus {
+          -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.175);
+          box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.175);
+          border: 1px solid $gray;
+        }
+      }
+    }
+    
+    .get-money {
+      float: right;
+    }
+  }
+}
+
+.partners {
+  margin-top: 100px;
+  
+  img {
+    margin-right: 40px;
+  }
+  
+  .jumbotron {
+    padding: 20px;
+  }
+}
+
+.btn {
+  @include transition( all, .3s, ease );
+  padding: 10px;
+  border: 0;
+  outline: none !important;
+}
+
+.input {
+  width: 100%;
+  &:focus {
+    border: 1px solid $gray;
+    -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.175);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.175);
+  }
+}
+
+.btn-primary {
+  background: $gray;
+  
+  &:hover {
+    background: darken( $gray, 10% );
+  }
+}
+
+.modal {
+  outline: none;
+  top: 15%;
+}
