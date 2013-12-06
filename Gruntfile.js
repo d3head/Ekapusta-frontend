@@ -296,7 +296,7 @@ module.exports = function (grunt) {
           src: [
             '*.{ico,png,txt}',
             '.htaccess',
-            'components/**/*',
+            'bower_components/**/*',
             'images/{,*/}*.{gif,webp,svg}',
             'styles/fonts/*'
           ]
@@ -400,7 +400,7 @@ module.exports = function (grunt) {
     'clean:dist',
     'useminPrepare',
     'compass',
-    //'copy:dist',
+    'copy:dist',
     //'imagemin',
     'svgmin',
     'concurrent:dist',
