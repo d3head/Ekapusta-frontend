@@ -401,7 +401,7 @@ module.exports = function (grunt) {
     'useminPrepare',
     'compass',
     //'copy:dist',
-    'imagemin',
+    //'imagemin',
     'svgmin',
     'concurrent:dist',
     'autoprefixer',
