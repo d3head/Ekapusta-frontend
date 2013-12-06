@@ -363,6 +363,20 @@ module.exports = function (grunt) {
     // },
 
     // Test settings
+    cssmin: {
+      // By default, your `index.html` <!-- Usemin Block --> will take care of
+      // minification. This option is pre-configured if you do not wish to use
+      // Usemin blocks.
+      dist: {
+        files: {
+          '<%= yeoman.dist %>/styles/main.css': [
+            '<%= yeoman.app %>/styles/{,*/}*.css',
+            '.tmp/styles/{,*/}*.css'
+          ],
+        }
+      }
+    },
+    
     karma: {
       unit: {
         configFile: 'karma.conf.js',
