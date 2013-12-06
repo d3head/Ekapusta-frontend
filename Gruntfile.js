@@ -296,9 +296,9 @@ module.exports = function (grunt) {
           src: [
             '*.{ico,png,txt}',
             '.htaccess',
-            'bower_components/**/*',
-            'images/{,*/}*.{webp}',
-            'fonts/*'
+            'components/**/*',
+            'images/{,*/}*.{gif,webp,svg}',
+            'styles/fonts/*'
           ]
         }, {
           expand: true,
@@ -307,13 +307,13 @@ module.exports = function (grunt) {
           src: [
             'generated/*'
           ]
+        }, {
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.app %>/styles',
+          dest: '.tmp/styles/',
+          src: [ '{,*/}*.scss' ]
         }]
-      },
-      styles: {
-        expand: true,
-        cwd: '<%= yeoman.app %>/styles',
-        dest: '.tmp/styles/',
-        src: '{,*/}*.css'
       }
     },
 
